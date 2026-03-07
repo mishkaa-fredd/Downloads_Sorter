@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <filesystem>
 
 using namespace std;
@@ -6,7 +6,10 @@ namespace fs = std::filesystem;
 
 int main() 
 {
-    string downloads = "C:/Users/User/Downloads"; 
+    string way;
+    cout << "Enter the path to your downloads folder: ";
+    cin >> way;
+    string downloads = way;
     
     for (const auto& file : fs::directory_iterator(downloads)) 
     {
