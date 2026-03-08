@@ -50,6 +50,10 @@ int main()
         {
             fs::create_directory(downloads + "/Torrents");
             fs::rename(file.path(), downloads + "/Torrents/" + file.path().filename().string());
-        } 
-    }  
-}
+        } else if (ext == ".otf" || ext == ".ttf") 
+        {
+            fs::create_directory(downloads + "/Fonts");
+            fs::rename(file.path(), downloads + "/Fonts/" + file.path().filename().string());
+        }
+    }
+} 
