@@ -10,7 +10,6 @@ int main()
     cout << "Enter the path to your downloads folder: ";
     cin >> way;
     string downloads = way;
-    
     for (const auto& file : fs::directory_iterator(downloads)) 
     {
         string ext = file.path().extension().string();
